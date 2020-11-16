@@ -1,7 +1,15 @@
+$base-color: #333;
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+body {
+  padding-top: 50px;
+  background-color: $base-color;
+}
+
 @import "./nav";
+@import "./carousel";

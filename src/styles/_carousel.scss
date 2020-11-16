@@ -1,0 +1,33 @@
+.category {
+  margin-left: 20px;
+  padding-top: 20px;
+  h2 {
+    color: rgba(255, 255, 255, 0.801);
+  }
+
+  .carousel {
+    display: flex;
+    cursor: pointer;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    padding: 20px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    .movie-poster {
+      object-fit: contain;
+      width: 100%;
+      max-height: 240px;
+      margin-right: 10px;
+      z-index: 0;
+    }
+
+    .movie-poster:hover {
+      transform: scale(1.15);
+      transition-duration: 1s;
+      z-index: 1;
+    }
+  }
+}
