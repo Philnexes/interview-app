@@ -1,0 +1,13 @@
+.movie-poster {
+  object-fit: contain;
+  width: 100%;
+  max-height: 240px;
+  margin-right: 10px;
+  z-index: 0;
+}
+
+.movie-poster:hover {
+  transform: scale(1.15);
+  transition-duration: 1s;
+  z-index: 1;
+}

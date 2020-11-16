@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import httpClient from "../utils/axios";
-import { getImgBaseUrl } from "../utils/utils";
+import Movie from "./Movie";
 
 const Carousel = ({ categoryTitle, apiUrl }) => {
   const [movies, setMovies] = useState([]);
@@ -20,16 +20,7 @@ const Carousel = ({ categoryTitle, apiUrl }) => {
       <h2>{categoryTitle}</h2>
       <div className="carousel">
         {movies.map((movie) => (
-          <img
-            key={movie.id}
-            className="movie-poster"
-            src={
-              movie.poster_path !== null
-                ? `${getImgBaseUrl()}${movie.poster_path}`
-                : ""
-            }
-            alt={movie?.title || movie?.name || movie?.originalName}
-          />
+          <Movie key={movie.id} movie={movie} />
         ))}
       </div>
     </div>
