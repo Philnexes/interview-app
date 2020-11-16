@@ -1,8 +1,10 @@
+import { useEffect } from "react";
 import { getImgBaseUrl } from "../utils/utils";
 
-const Movie = ({ movie }) => {
+const Movie = ({ movie, setShowDetail }) => {
   return (
     <img
+      onClick={() => setShowDetail(true)}
       className="movie-poster"
       src={
         movie.poster_path !== null

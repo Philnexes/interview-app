@@ -1,3 +1,8 @@
+@use "./nav";
+@use "./carousel";
+@use "./movie";
+@use "./detaildialog";
+
 $base-color: #333;
 
 * {
@@ -10,7 +15,3 @@ body {
   padding-top: 50px;
   background-color: $base-color;
 }
-
-@import "./nav";
-@import "./carousel";
-@import "./movie";
