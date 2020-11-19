@@ -2,6 +2,7 @@
 @use "./carousel";
 @use "./movie";
 @use "./detaildialog";
+@import "react-responsive-modal/styles.css";
 
 $base-color: #333;
 
@@ -14,4 +15,10 @@ $base-color: #333;
 body {
   padding-top: 50px;
   background-color: $base-color;
+}
+
+.modal-detail {
+  background: #b2dbbf;
+  max-width: 500px;
+  width: 100%;
 }

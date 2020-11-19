@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { getImgBaseUrl } from "../utils/utils";
 
 const Movie = ({ movie, setShowDetail, setMovieDetail }) => {
