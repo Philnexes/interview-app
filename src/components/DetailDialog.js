@@ -9,14 +9,17 @@ const DetailDialog = ({ movieDetail }) => {
 
   return (
     <div className="modal-content">
-      <span className="title-overview">
-        <h2>{movieTitle}</h2>
-        <p>{movieDetail?.overview}</p>
-      </span>
+      <div className="movie-overview">
+        <h2 className="title">{movieTitle}</h2>
+        <p className="overview">{movieDetail?.overview}</p>
+        <div className="play-button-container">
+          <button className="play-button">Play trailer</button>
+        </div>
+      </div>
 
-      <span className="thumbnail-container">
+      <div className="thumbnail-container">
         <img className="thumbnail" src={moviePosterPath} alt="Obrazek" />
-      </span>
+      </div>
     </div>
   );
 };

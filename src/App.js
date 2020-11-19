@@ -31,7 +31,7 @@ function App() {
         setShowDetail={setShowDetail}
         setMovieDetail={setMovieDetail}
       />
-      {/* <Carousel
+      <Carousel
         categoryTitle="Popular series"
         apiUrl={requests.fetchTrendingSeries}
         setShowDetail={setShowDetail}
@@ -48,7 +48,7 @@ function App() {
         apiUrl={requests.fetchDiscoverMoviesDocumentary}
         setShowDetail={setShowDetail}
         setMovieDetail={setMovieDetail}
-      /> */}
+      />
     </div>
   );
 }

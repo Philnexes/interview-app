@@ -15,10 +15,21 @@ $base-color: #333;
 body {
   padding-top: 50px;
   background-color: $base-color;
+  color: rgba(255, 255, 255, 0.801);
+  min-width: 320px;
 }
 
 .modal-detail {
-  background: #b2dbbf;
-  max-width: 500px;
-  width: 100%;
+  background: $base-color;
+  width: 90vw;
+  min-height: 300px;
+  max-height: 480px;
+  height: auto;
+  padding: 50px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 800px) {
+    height: 600px;
+    width: 430px;
+  }
 }
