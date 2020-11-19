@@ -1,7 +1,10 @@
-const DetailDialog = ({ showDetail, setShowDetail }) => {
+const DetailDialog = ({ movieDetail }) => {
   return (
-    <div className={`detail-dialog ${showDetail ? "active-detail" : " "}`}>
-      <h1>pokus</h1>
+    <div>
+      <h2>
+        {movieDetail?.title || movieDetail?.name || movieDetail?.originalName}
+      </h2>
+      <p>{movieDetail?.overview}</p>
     </div>
   );
 };

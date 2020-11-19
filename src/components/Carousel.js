@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import httpClient from "../utils/axios";
 import Movie from "./Movie";
 
-const Carousel = ({ categoryTitle, apiUrl, setShowDetail }) => {
+const Carousel = ({ categoryTitle, apiUrl, setShowDetail, setMovieDetail }) => {
   const [movies, setMovies] = useState([]);
 
   //Fetch data whenever the apiUrl changes
@@ -20,7 +20,12 @@ const Carousel = ({ categoryTitle, apiUrl, setShowDetail }) => {
       <h2>{categoryTitle}</h2>
       <div className="carousel">
         {movies.map((movie) => (
-          <Movie key={movie.id} movie={movie} setShowDetail={setShowDetail} />
+          <Movie
+            key={movie.id}
+            movie={movie}
+            setShowDetail={setShowDetail}
+            setMovieDetail={setMovieDetail}
+          />
         ))}
       </div>
     </div>
