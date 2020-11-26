@@ -3,7 +3,7 @@ import Nav from "./components/Nav";
 import Carousel from "./components/Carousel";
 import DetailDialog from "./components/DetailDialog";
 import requests from "./utils/requests";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Modal } from "react-responsive-modal";
 
 function App() {

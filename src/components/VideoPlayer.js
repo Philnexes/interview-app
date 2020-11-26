@@ -31,13 +31,16 @@ class VideoPlayer extends React.PureComponent {
   }
 
   //Initialize your shaka player here
-  componentDidMount() {
+  componentDidMount(props) {
     //MPEG-DASH video URL
     var manifestUri =
       "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
 
     //Reference to our video component on DOM
     const video = this.videoComponent.current;
+
+    //Request full screen (this works for dekstop browsers only)
+    video.requestFullscreen();
 
     //Initializing our shaka player
     var player = new shaka.Player(video);
@@ -57,9 +60,8 @@ class VideoPlayer extends React.PureComponent {
   }
 
   render() {
-    /*Returning video component. Shaka player will be added to this component
-            once its mounted on DOM
-        */
+    //Returning video component. Shaka player will be added to this component once its mounted on DOM
+
     return (
       <video
         autoPlay
