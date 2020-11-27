@@ -32,9 +32,10 @@ class VideoPlayer extends React.PureComponent {
 
   //Initialize your shaka player here
   componentDidMount(props) {
-    //MPEG-DASH video URL
+    //MPEG-DASH video URL, m3u8 throws errors, but works, resolve that issue later
     var manifestUri =
-      "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
+      "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+    // "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
 
     //Reference to our video component on DOM
     const video = this.videoComponent.current;
@@ -54,6 +55,7 @@ class VideoPlayer extends React.PureComponent {
       .load(manifestUri)
       .then(function () {
         // This runs if the asynchronous load is successful.
+        video.play();
         console.log("The video has now been loaded!");
       })
       .catch(this.onError); // onError is executed if the asynchronous load fails.
@@ -64,7 +66,6 @@ class VideoPlayer extends React.PureComponent {
 
     return (
       <video
-        autoPlay
         width="640"
         ref={this.videoComponent}
         poster="//shaka-player-demo.appspot.com/assets/poster.jpg"

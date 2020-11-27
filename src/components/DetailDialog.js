@@ -1,9 +1,9 @@
 import { useState } from "react";
+import Modal from "react-responsive-modal";
 import { getImgBaseUrl } from "../utils/utils";
-import VideoPlayer from "./VideoPlayer";
-import { Modal } from "react-responsive-modal";
+import TrailerPopup from "./TrailerPopup";
 
-const DetailDialog = ({ movieDetail }) => {
+const DetailDialog = ({ showDetail, closeDetail, movieDetail }) => {
   const [playTrailer, setPlayTrailer] = useState(false);
 
   let moviePosterPath = movieDetail?.poster_path
@@ -16,6 +16,25 @@ const DetailDialog = ({ movieDetail }) => {
     setPlayTrailer(true);
   };
 
+  return (
+    <Modal
+      open={showDetail}
+      onClose={closeDetail}
+      center
+      classNames={{ modal: "modal-detail" }}
+    >
+      <Detail
+        movieTitle={movieTitle}
+        movieDetail={movieDetail}
+        handlePlay={handlePlay}
+        moviePosterPath={moviePosterPath}
+      />
+      <TrailerPopup playTrailer={playTrailer} setPlayTrailer={setPlayTrailer} />
+    </Modal>
+  );
+};
+
+const Detail = ({ movieTitle, movieDetail, handlePlay, moviePosterPath }) => {
   return (
     <div className="modal-content">
       <div className="movie-overview">
@@ -31,19 +50,6 @@ const DetailDialog = ({ movieDetail }) => {
       <div className="thumbnail-container">
         <img className="thumbnail" src={moviePosterPath} alt="Obrazek" />
       </div>
-
-      <Modal
-        open={playTrailer}
-        onClose={() => {
-          setPlayTrailer(false);
-        }}
-        center
-        classNames={{ modal: "video-player-window" }}
-      >
-        <div className="video-player">
-          <VideoPlayer />
-        </div>
-      </Modal>
     </div>
   );
 };

@@ -17,14 +17,11 @@ function App() {
   return (
     <div className="App">
       <Nav />
-      <Modal
-        open={showDetail}
-        onClose={closeDetail}
-        center
-        classNames={{ modal: "modal-detail" }}
-      >
-        <DetailDialog movieDetail={movieDetail} />
-      </Modal>
+      <DetailDialog
+        showDetail={showDetail}
+        closeDetail={closeDetail}
+        movieDetail={movieDetail}
+      />
       <Carousel
         categoryTitle="Popular movies"
         apiUrl={requests.fetchTrendingMovies}

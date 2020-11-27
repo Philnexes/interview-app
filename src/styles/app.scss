@@ -2,6 +2,7 @@
 @use "./carousel";
 @use "./movie";
 @use "./detaildialog";
+@use "./trailerpopup";
 @import "react-responsive-modal/styles.css";
 
 $base-color: #333;
@@ -17,19 +18,4 @@ body {
   background-color: $base-color;
   color: rgba(255, 255, 255, 0.801);
   min-width: 320px;
-}
-
-.modal-detail {
-  background: $base-color;
-  width: 90vw;
-  min-height: 300px;
-  max-height: 480px;
-  height: auto;
-  padding: 50px;
-  overflow: hidden;
-
-  @media only screen and (max-width: 800px) {
-    height: 600px;
-    width: 430px;
-  }
 }
