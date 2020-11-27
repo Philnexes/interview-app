@@ -1,3 +1,5 @@
+$base-color: #333;
+
 .modal-content {
   display: grid;
   justify-content: center;
@@ -72,5 +74,20 @@
     @media only screen and (max-width: 800px) {
       display: none;
     }
+  }
+}
+
+.modal-detail {
+  background: $base-color;
+  width: 90vw;
+  min-height: 300px;
+  max-height: 480px;
+  height: auto;
+  padding: 50px;
+  overflow: hidden;
+
+  @media only screen and (max-width: 800px) {
+    height: 600px;
+    width: 430px;
   }
 }
