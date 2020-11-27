@@ -4,8 +4,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 # Initializing this app
 You'll need to define .env file with an API key from TMDB API, the name of the property is REACT_APP_API_KEY
+Don't forget to `touch env`
 
-Also delete package-lock.json file and run `npm install`a
+Also delete package-lock.json file and run `npm install`
 
 After npm start, the app should work as intended (on desktop browser, needs optimization for mobile browsers)
 
