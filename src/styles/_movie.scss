@@ -1,9 +1,10 @@
 .movie-poster {
   object-fit: contain;
-  width: 100%;
+  width: auto;
   max-height: 240px;
   margin-right: 10px;
-  border-radius: 15px;
+  border-radius: 30px;
+  padding: 10px;
 
   transition: transform 0.5s;
   z-index: 0;
