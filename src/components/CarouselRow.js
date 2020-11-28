@@ -30,27 +30,11 @@ const CarouselRow = ({
         arrows
         slidesPerPage={8}
         slidesPerScroll={2}
+        offset={20}
         infinite
+        draggable
         clickToChange
         centered
-        breakpoints={{
-          1000: {
-            // these props will be applied when screen width is less than 1000px
-            slidesPerPage: 2,
-            clickToChange: false,
-            centered: false,
-            arrows: true,
-            infinite: true,
-          },
-          500: {
-            slidesPerPage: 1,
-            slidesPerScroll: 1,
-            clickToChange: false,
-            centered: false,
-            animationSpeed: 2000,
-            infinite: true,
-          },
-        }}
       >
         {movies.map((movie) => (
           <Movie
