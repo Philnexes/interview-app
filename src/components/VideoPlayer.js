@@ -1,10 +1,11 @@
 //importing dependencies
 import React from "react";
 import shaka from "shaka-player";
+import { getVideoPathHls, getVideoPathMp4 } from "../utils/utils";
 import muxjs from "mux.js";
 
-//Creating class component
-
+//a video player that I found on someone's GitHub... took the class and edited it for the purposes of my application.
+//video player starts in a fullscreen mode on desktop browsers only
 class VideoPlayer extends React.PureComponent {
   constructor(props) {
     super(props);
@@ -33,9 +34,7 @@ class VideoPlayer extends React.PureComponent {
   //Initialize your shaka player here
   componentDidMount(props) {
     //MPEG-DASH video URL, m3u8 throws errors, but works, resolve that issue later
-    var manifestUri =
-      "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
-    // "https://bitdash-a.akamaihd.net/content/sintel/hls/playlist.m3u8";
+    var manifestUri = getVideoPathMp4();
 
     //Reference to our video component on DOM
     const video = this.videoComponent.current;

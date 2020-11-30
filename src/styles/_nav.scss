@@ -1,5 +1,4 @@
 $base-color: #333;
-$hidden-color: transparent;
 
 .nav {
   position: fixed;
@@ -14,21 +13,30 @@ $hidden-color: transparent;
   justify-content: space-between;
 
   overflow: hidden;
-  background-color: $hidden-color;
+  background-color: transparent;
 
-  .nav-logo {
+  .nav-logo-container {
     height: 2.3rem;
     align-self: center;
-
     margin-left: 0.7rem;
+
+    .nav-logo {
+      max-width: 100%;
+      max-height: 100%;
+    }
   }
 
-  .nav-avatar {
+  .nav-avatar-container {
     height: 2.5rem;
     align-self: center;
-
-    border-radius: 50%;
     margin-right: 1rem;
+
+    .nav-avatar {
+      max-width: 100%;
+      max-height: 100%;
+
+      border-radius: 50%;
+    }
   }
 }
 
