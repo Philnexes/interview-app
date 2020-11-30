@@ -1,5 +1,4 @@
 $base-color: #333;
-$hidden-color: transparent;
 
 .nav {
   position: fixed;
@@ -14,7 +13,7 @@ $hidden-color: transparent;
   justify-content: space-between;
 
   overflow: hidden;
-  background-color: $hidden-color;
+  background-color: transparent;
 
   .nav-logo-container {
     height: 2.3rem;

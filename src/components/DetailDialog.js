@@ -1,16 +1,16 @@
 import { useState } from "react";
 import Modal from "react-responsive-modal";
-import { getImgBaseUrl } from "../utils/utils";
+import { getMovieTitle, getPosterPath } from "../utils/utils";
 import TrailerPopup from "./TrailerPopup";
 
+//a modal window that is being shown on movie click in carousel
+//the window shows basic overview of the movie, title, poster and a play button to launch the playback of the trailer (hardcoded video stream for the purposes of this application)
 const DetailDialog = ({ showDetail, closeDetail, movieDetail }) => {
   const [playTrailer, setPlayTrailer] = useState(false);
 
-  let moviePosterPath = movieDetail?.poster_path
-    ? `${getImgBaseUrl()}${movieDetail.poster_path}`
-    : "https://www.indiaspora.org/wp-content/uploads/2018/10/image-not-available.jpg";
-  let movieTitle =
-    movieDetail?.title || movieDetail?.name || movieDetail?.originalName;
+  //get movie posterpath and title (from utils, implements null check)
+  let moviePosterPath = getPosterPath(movieDetail?.poster_path);
+  let movieTitle = getMovieTitle(movieDetail);
 
   const handlePlay = () => {
     setPlayTrailer(true);
