@@ -40,6 +40,10 @@ const Detail = ({ movieTitle, movieDetail, handlePlay, moviePosterPath }) => {
       <div className="movie-overview">
         <h2 className="title">{movieTitle}</h2>
         <p className="overview">{movieDetail?.overview}</p>
+        <div className="movie-metadata">
+          <p className="rating">{movieDetail?.vote_average}/10</p>
+          <p className="release-date">{movieDetail?.release_date}</p>
+        </div>
         <div className="play-button-container">
           <button onClick={handlePlay} className="play-button">
             Play trailer

@@ -48,9 +48,26 @@ $base-color: #333;
       }
     }
 
+    .movie-metadata {
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: space-between;
+
+      font-weight: 300;
+      font-size: 1.5rem;
+
+      .rating {
+      }
+
+      @media only screen and (max-width: 800px) {
+        padding-top: 30px;
+      }
+    }
+
     .play-button-container {
       text-align: center;
-      margin-top: 80px;
+      margin-top: 40px;
 
       .play-button {
         grid-row: 1;
@@ -68,6 +85,10 @@ $base-color: #333;
         &:hover {
           transform: scale(1.05);
           transition: all 0.3s;
+        }
+
+        @media only screen and (max-width: 800px) {
+          margin-top: 50px;
         }
       }
     }
