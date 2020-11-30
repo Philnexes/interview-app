@@ -17,7 +17,8 @@ const Nav = () => {
     <div
       id="navbar"
       className={`nav ${showNav && "nav-background-scrolldown"}`}
-          <a
+    >
+      <a
         className="nav-logo-container"
         href="https://www.24i.com/"
         target="_blank"
