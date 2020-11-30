@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import httpClient from "../utils/axios";
 import Movie from "./Movie";
+import ScrollContainter from "react-indiana-drag-scroll"
 
 const Carousel = ({ categoryTitle, apiUrl, setShowDetail, setMovieDetail }) => {
   const [movies, setMovies] = useState([]);
@@ -18,16 +19,15 @@ const Carousel = ({ categoryTitle, apiUrl, setShowDetail, setMovieDetail }) => {
   return (
     <div className="category">
       <h2>{categoryTitle}</h2>
-      <div className="carousel">
-        {movies.map((movie) => (
+      <ScrollContainter className="carousel"> 
+      {movies.map((movie) => (
           <Movie
             key={movie.id}
             movie={movie}
             setShowDetail={setShowDetail}
             setMovieDetail={setMovieDetail}
           />
-        ))}
-      </div>
+        ))}</ScrollContainter>
     </div>
   );
 };
