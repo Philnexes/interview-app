@@ -4,7 +4,6 @@ import Carousel from "./components/Carousel";
 import DetailDialog from "./components/DetailDialog";
 import requests from "./utils/requests";
 import { useState } from "react";
-import { Modal } from "react-responsive-modal";
 
 function App() {
   const [showDetail, setShowDetail] = useState(false);
