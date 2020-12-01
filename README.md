@@ -13,7 +13,9 @@ Just use `getVideoPathHls()` instead of `getVideoPathMp4()`
 
 # Used libraries
 
-## asd
+## react-indiana-drag-scroll
+
+This is used t
 
 # Initializing this app
 You'll need to define .env file with an API key from TMDB API, the name of the property is REACT_APP_API_KEY
