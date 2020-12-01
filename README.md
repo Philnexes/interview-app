@@ -13,9 +13,29 @@ Just use `getVideoPathHls()` instead of `getVideoPathMp4()`
 
 # Used libraries
 
-## react-indiana-drag-scroll
+## `axios`
 
-This is used t
+A library used to consume an API
+
+## `react-indiana-drag-scroll`
+
+This library makes sure that the carousel container is able to be scrolled with a mouse/touch drag.
+https://github.com/Norserium/react-indiana-drag-scroll
+
+## `react-responsive-modal`
+
+This library ensures a modal window for a detail popup and movie player. The big advantage of this library is its transparency in properties that can be used, custom styling and it already handles a lifecycle of the modal window and the objects within.
+https://github.com/pradel/react-responsive-modal
+
+## `shaka-player`
+
+Google made video player that was required to be implemented by the task assignement.
+
+## `mux`
+
+This helps the Chrome browser to decode the m3u8 stream
+
+
 
 # Initializing this app
 You'll need to define .env file with an API key from TMDB API, the name of the property is REACT_APP_API_KEY
