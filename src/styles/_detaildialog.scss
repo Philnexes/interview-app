@@ -37,7 +37,7 @@ $base-color: #333;
     .overview {
       font-size: 1rem;
       overflow: scroll;
-      height: 40%;
+      height: 42%;
 
       &::-webkit-scrollbar {
         display: none;
@@ -54,6 +54,7 @@ $base-color: #333;
       align-items: flex-start;
       justify-content: space-between;
 
+      margin-top: 20px;
       font-weight: 300;
       font-size: 1.5rem;
 
@@ -67,7 +68,7 @@ $base-color: #333;
 
     .play-button-container {
       text-align: center;
-      margin-top: 40px;
+      margin-top: 30px;
 
       .play-button {
         grid-row: 1;
