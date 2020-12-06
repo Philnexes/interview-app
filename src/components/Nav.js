@@ -29,7 +29,7 @@ const Nav = () => {
       >
         <img
           className="nav-logo"
-          src="https://www.24i.com/wp-content/themes/24i_media/images/24i%20Logo%20%E2%80%93%20White.svg"
+          src="http://assets.pindej.cz/24ilogo.png"
           alt="24i logo"
         />
       </a>
