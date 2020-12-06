@@ -114,6 +114,10 @@ $base-color: #333;
   padding: 50px;
   overflow: hidden;
 
+  .react-responsive-modal-closeButton svg {
+    fill: white;
+  }
+
   @media only screen and (max-width: 800px) {
     height: 600px;
     width: 430px;
