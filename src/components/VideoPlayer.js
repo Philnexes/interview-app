@@ -40,7 +40,7 @@ class VideoPlayer extends React.PureComponent {
     const video = this.videoComponent.current;
 
     //Request full screen (this works for dekstop browsers only)
-    video.requestFullscreen();
+    video.requestFullscreen?.();
 
     //Initializing our shaka player
     var player = new shaka.Player(video);
