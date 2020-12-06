@@ -35,16 +35,17 @@ $base-color: #333;
     }
 
     .overview {
-      font-size: 1rem;
+      font-size: 1.25rem;
       overflow: scroll;
       height: 42%;
+      height: 143px;
 
       &::-webkit-scrollbar {
         display: none;
       }
 
       @media only screen and (max-width: 800px) {
-        font-size: 0.75rem;
+        font-size: 1.25rem;
       }
     }
 
@@ -56,13 +57,10 @@ $base-color: #333;
 
       margin-top: 20px;
       font-weight: 300;
-      font-size: 1.5rem;
-
-      .rating {
-      }
+      font-size: 1.25rem;
 
       @media only screen and (max-width: 800px) {
-        padding-top: 30px;
+        margin-top: 35px;
       }
     }
 
@@ -87,10 +85,9 @@ $base-color: #333;
           transform: scale(1.05);
           transition: all 0.3s;
         }
-
-        @media only screen and (max-width: 800px) {
-          margin-top: 50px;
-        }
+      }
+      @media only screen and (max-width: 800px) {
+        margin-top: 35px;
       }
     }
   }
@@ -117,8 +114,14 @@ $base-color: #333;
   padding: 50px;
   overflow: hidden;
 
+  .react-responsive-modal-closeButton svg {
+    fill: white;
+  }
+
   @media only screen and (max-width: 800px) {
     height: 600px;
     width: 430px;
+    max-width: 95vw;
+    margin: 0 2.5vw;
   }
 }

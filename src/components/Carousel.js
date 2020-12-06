@@ -20,7 +20,7 @@ const Carousel = ({ categoryTitle, apiUrl, setShowDetail, setMovieDetail }) => {
   //return a carousel container that holds every movie
   return (
     <div className="category">
-      <h2>{categoryTitle}</h2>
+      <h2 className="category-title">{categoryTitle}</h2>
       <ScrollContainter className="carousel">
         {movies.map((movie) => (
           <Movie
