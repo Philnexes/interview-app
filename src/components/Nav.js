@@ -8,7 +8,7 @@ const Nav = () => {
   //this use of UseEffect simulates the behaviour of ComponentWillMount and ComponentDidUnmount from original class type components (I really do like the functional ones!)
   useEffect(() => {
     window.addEventListener("scroll", () => {
-      setShowNav(window.scrollY > 100);
+      setShowNav(window.scrollY > 50);
 
       return () => {
         window.removeEventListener("scroll");
