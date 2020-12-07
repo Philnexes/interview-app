@@ -28,7 +28,9 @@ $base-color: #333;
     .title {
       font-size: 1.75rem;
       margin-bottom: 20px;
-
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
       @media only screen and (max-width: 800px) {
         font-size: 1.5rem;
       }
