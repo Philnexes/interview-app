@@ -1,10 +1,6 @@
 # Live version
 https://i-interview-app.web.app/
 
-# NOTICE
-
-Due to a brutal time pressure lately (other project deadlines, helping cousin with a remote education on high school etc.) I'm wont be able to work on this project for next few weeks (written on December 1st 2020), but I believe the state of the app is representative... kind of... Lots of things are open for discussion, and there's a lot to improve.
-
 # Initializing this app
 You'll need to define .env file with an API key from TMDB API, the name of the property is REACT_APP_API_KEY
 Don't forget to `touch env` and `npm install`
